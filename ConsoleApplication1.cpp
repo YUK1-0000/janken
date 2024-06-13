@@ -21,7 +21,7 @@ bool search_num(int *num_array, int num)
 
 int janken(void)
 {
-	int allowed_nums[] = {1, 2, 3};
+	int allowed_nums[] = { 1, 2, 3 };
 	const char* hands[] = { "ぐー", "ちょき", "ぱー" };
 	int cpu_ind, player_ind;
 
