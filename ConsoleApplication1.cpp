@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 #include <random>
 
+
 bool search_num(int *num_array, int num)
 {
 	bool result = false;
@@ -17,6 +18,7 @@ bool search_num(int *num_array, int num)
 	return result;
 }
 
+
 int janken(void)
 {
 	int allowed_nums[] = {1, 2, 3};
@@ -27,7 +29,6 @@ int janken(void)
 	{
 		printf("\n1:ぐー, 2:ちょき, 3:ぱー\n");
 		scanf_s("%d", &player_ind);
-	
 	}
 	while (!search_num(allowed_nums, player_ind));
 
@@ -53,6 +54,7 @@ int janken(void)
 	return 0;
 }
 
+
 int main(void)
 {
 	int allowed_nums[] = { 1, 2 };
@@ -66,7 +68,6 @@ int main(void)
 		{
 			printf("1:続ける, 2:やめる\n");
 			scanf_s("%d", &num);
-
 		}
 		while (!search_num(allowed_nums, num));
 
