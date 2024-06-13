@@ -23,16 +23,12 @@ int janken(void)
 	const char* hands[] = { "ぐー", "ちょき", "ぱー" };
 	int cpu_ind, player_ind;
 
-	while (true)
+	do
 	{
 		printf("\n1:ぐー, 2:ちょき, 3:ぱー\n");
 		scanf_s("%d", &player_ind);
-
-		if (search_num(allowed_nums, player_ind))
-		{
-			break;
-		}
-	}
+	
+	} while (!search_num(allowed_nums, player_ind));
 
 	player_ind -= 1;
 	cpu_ind = rand() % 3;
@@ -61,26 +57,23 @@ int main(void)
 	int allowed_nums[] = { 1, 2 };
 	int num;
 
-	while (true)
+	do
 	{
 		janken();
 
-		while (true)
+		do
 		{
 			printf("1:続ける, 2:やめる\n");
 			scanf_s("%d", &num);
 
-			if (search_num(allowed_nums, num))
-			{
-				break;
-			}
-		}
+		} while (!search_num(allowed_nums, num));
 
 		if (num == 2)
 		{
 			break;
 		}
-	}
+	} while (num != 2);
+
 	return 0;
 }
 
