@@ -28,7 +28,8 @@ int janken(void)
 		printf("\n1:ぐー, 2:ちょき, 3:ぱー\n");
 		scanf_s("%d", &player_ind);
 	
-	} while (!search_num(allowed_nums, player_ind));
+	}
+	while (!search_num(allowed_nums, player_ind));
 
 	player_ind -= 1;
 	cpu_ind = rand() % 3;
@@ -66,13 +67,15 @@ int main(void)
 			printf("1:続ける, 2:やめる\n");
 			scanf_s("%d", &num);
 
-		} while (!search_num(allowed_nums, num));
+		}
+		while (!search_num(allowed_nums, num));
 
 		if (num == 2)
 		{
 			break;
 		}
-	} while (num != 2);
+	}
+	while (num != 2);
 
 	return 0;
 }
